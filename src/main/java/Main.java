@@ -1,3 +1,5 @@
+package katacalc.src.main.java;
+
 import java.util.Scanner;
 
 public class Main {
@@ -12,7 +14,6 @@ public class Main {
 
         System.out.println("Input: ");
         reader = new DataReader(exitCharacter);
-        //Digits check = new Digits(false, false);
         Scanner scanner = new Scanner(System.in);
         String text = scanner.nextLine();
             try {

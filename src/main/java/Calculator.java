@@ -1,3 +1,5 @@
+package katacalc.src.main.java;
+
 import java.util.regex.Pattern;
 
 class Calculator {

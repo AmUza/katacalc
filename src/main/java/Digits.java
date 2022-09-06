@@ -1,4 +1,6 @@
- class Digits {
+package katacalc.src.main.java;
+
+class Digits {
 
      boolean isRoman = false;
      boolean isArab = false;
@@ -52,7 +54,7 @@
 
      int result(double input){
          int output;
-         if (((this.isRoman)&&(input<1))|(this.isArab)) {
+         if ( ((this.isRoman) && (input>=1)) | (this.isArab) ) {
              output = (int)Math.ceil(input);
              this.result = output;
          } else {
