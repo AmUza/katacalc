@@ -20,7 +20,7 @@ class Calculator {
     static int Format(String input) {
         int num = 0;
         int arg;
-            if (!Pattern.matches("[^0-9]{1,2}",input)){
+            if (Pattern.matches("[\\d]",input)){
                 arg=Integer.parseInt(input);
                 if ((arg<=10)&&(arg>=1)){
                     num=arg;

@@ -36,6 +36,7 @@ public class Main {
                 try {
                     numb1 = Calculator.Format(str1);
                 } catch (RuntimeException e) {
+                    e.printStackTrace();
                     return e.getMessage();
                 }
             }
@@ -44,6 +45,7 @@ public class Main {
                 try {
                     numb2 = Calculator.Format(str2);
                 } catch (RuntimeException e) {
+                    e.printStackTrace();
                     return e.getMessage();
                 }
             }
@@ -51,7 +53,11 @@ public class Main {
                 double result = Math.rint(100.00 * Calculator.calculate(numb1, numb2, reader.getOper())) / 100.00;
                 check.setResult(result);
                 int output = Digits.getResult();
-                res = String.valueOf(output);
+                if (check.isRoman) {
+                    res = check.switchToRoman(output);
+                } else {
+                    res = String.valueOf(output);
+                }
             }
         }
         return res;
