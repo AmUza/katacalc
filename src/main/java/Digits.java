@@ -51,6 +51,64 @@ class Digits {
         return output;
     }
 
+    static String switchToRomanAll(int input) {
+
+        String output = null;
+        String value = String.valueOf(input);
+        if (input/10>0) {
+            output = "X";
+            input = input - 10;
+            for (int i = input / 10; i > 0; i--) {
+                output = output + "X";
+                System.out.println(output);
+                input = input - 10;
+            }
+        }
+        if (input==9) {
+            if (output==null) {
+                output = "IX";
+            } else {
+                output = output + "IX";
+            }
+            input = input - 9;
+        }
+        if (input/5>0) {
+            if (output==null) {
+                output = "V";
+            } else {
+                output = output + "V";
+            }
+            input = input - 5;
+            for(int i = input/5; i > 0; i--) {
+                output = output + "V";
+                System.out.println(output);
+                input = input - 5;
+            }
+        }
+        if (input==4) {
+            if (output==null) {
+                output = "IV";
+            } else {
+                output = output + "IV";
+            }
+            input = input - 4;
+        }
+        if (input/1>0) {
+            if (output==null) {
+                output = "I";
+            } else {
+                output = output + "I";
+            }
+            input = input - 1;
+            int count = 0;
+            for(int i = input/1; i > 0; i--) {
+                output = output + "I";
+                System.out.println(output);
+                input = input - 1;
+            }
+        }
+        return output;
+    }
     static String switchToRoman(int input) {
         String output;
         switch (input) {
@@ -93,7 +151,12 @@ class Digits {
 
      int result(double input){
          int output;
-         output = (int)Math.ceil(input);
+         double value = input;
+         //output = (int)Math.ceil(input);
+         value = value * Math.pow(10, 0);
+         value = Math.floor(value);
+         value = value / Math.pow(10, 0);
+         output = (int)value;
          if ( ((this.isRoman) && (input>=1)) | (this.isArab) ) {
              this.result = output;
          } else {

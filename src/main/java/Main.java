@@ -54,7 +54,7 @@ public class Main {
                 check.setResult(result);
                 int output = Digits.getResult();
                 if (check.isRoman) {
-                    res = check.switchToRoman(output);
+                    res = check.switchToRomanAll(output);
                 } else {
                     res = String.valueOf(output);
                 }
