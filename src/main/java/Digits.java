@@ -55,8 +55,29 @@ class Digits {
 
         String output = null;
         String value = String.valueOf(input);
+        if (input/50>0) {
+            output = "L";
+            input = input - 50;
+            for (int i = input / 50; i > 0; i--) {
+                output = output + "L";
+                System.out.println(output);
+                input = input - 50;
+            }
+        }
+        if (input>=40) {
+            if (output==null) {
+                output = "XL";
+            } else {
+                output = output + "XL";
+            }
+            input = input - 40;
+        }
         if (input/10>0) {
-            output = "X";
+            if (output==null) {
+                output = "X";
+            } else {
+                output = output + "X";
+            }
             input = input - 10;
             for (int i = input / 10; i > 0; i--) {
                 output = output + "X";
