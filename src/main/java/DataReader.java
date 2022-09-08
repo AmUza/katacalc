@@ -57,7 +57,7 @@ import java.util.regex.Pattern;
         return this.oper;
     }
 
-    boolean isExitFlag() {
+    /*boolean isExitFlag() {
         return this.exitFlag;
-    }
+    }*/
 }

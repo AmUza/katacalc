@@ -54,13 +54,11 @@ class Digits {
     static String switchToRomanAll(int input) {
 
         String output = null;
-        String value = String.valueOf(input);
         if (input/50>0) {
             output = "L";
             input = input - 50;
             for (int i = input / 50; i > 0; i--) {
                 output = output + "L";
-                System.out.println(output);
                 input = input - 50;
             }
         }
@@ -81,7 +79,6 @@ class Digits {
             input = input - 10;
             for (int i = input / 10; i > 0; i--) {
                 output = output + "X";
-                System.out.println(output);
                 input = input - 10;
             }
         }
@@ -102,7 +99,6 @@ class Digits {
             input = input - 5;
             for(int i = input/5; i > 0; i--) {
                 output = output + "V";
-                System.out.println(output);
                 input = input - 5;
             }
         }
@@ -121,15 +117,14 @@ class Digits {
                 output = output + "I";
             }
             input = input - 1;
-            int count = 0;
             for(int i = input/1; i > 0; i--) {
                 output = output + "I";
-                System.out.println(output);
                 input = input - 1;
             }
         }
         return output;
     }
+    /*
     static String switchToRoman(int input) {
         String output;
         switch (input) {
@@ -167,7 +162,7 @@ class Digits {
                 throw new RuntimeException("Error in value: " + input + " is not supported. ");
         }
         return output;
-    }
+    }*/
 
 
      int result(double input){
